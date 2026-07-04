@@ -3,37 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <base href="https://nafissiddiky2.github.io/Portfolio/">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="../images/logo.png" alt="S.N.Express Logo" class="logo-image">
-                <span>S.A.Nafis</span>
+                <img src="images/logo.png" alt="Logo" class="logo-image">
+                <span>S.N.Express</span>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#" onclick="navigateTo('home.html')" class="active" data-page="home">
-                    <i class="fas fa-home"></i> Home
-                </a></li>
-                <li><a href="#" onclick="navigateTo('certifications.html')" data-page="certifications">
-                    <i class="fas fa-certificate"></i> Certifications
-                </a></li>
-                <li><a href="#" onclick="navigateTo('skills.html')" data-page="skills">
-                    <i class="fas fa-tools"></i> Skills
-                </a></li>
-                <li><a href="#" onclick="navigateTo('gallery.html')" data-page="gallery">
-                    <i class="fas fa-images"></i> Photo Gallery
-                </a></li>
-                <li><a href="#" onclick="navigateTo('education.html')" data-page="education">
-                    <i class="fas fa-graduation-cap"></i> Education
-                </a></li>
-                <li><a href="#" onclick="navigateTo('contact.html')" data-page="contact">
-                    <i class="fas fa-envelope"></i> Contact
-                </a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('home.html')" class="active">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('certifications.html')">Certifications</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('skills.html')">Skills</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('gallery.html')">Photo Gallery</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('education.html')">Education</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('contact.html')">Contact</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -43,14 +31,15 @@
         </div>
     </nav>
 
-    <!-- Main Content Area -->
     <main id="content" class="main-content">
-        <!-- Content will be loaded here dynamically -->
+        <div style="text-align:center; padding:50px;">
+            <i class="fas fa-spinner fa-spin" style="font-size:40px; color:#2563eb;"></i>
+            <p>Loading...</p>
+        </div>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
+        <p>&copy; 2026 S.N.Express. All rights reserved.</p>
     </footer>
 
     <script src="js/main.js"></script>
