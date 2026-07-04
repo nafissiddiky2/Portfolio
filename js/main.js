@@ -1,11 +1,11 @@
-// Simple navigation without any complex logic
+// Simple navigation
 document.addEventListener('DOMContentLoaded', function() {
     loadPage('home.html');
 });
 
 function navigateTo(page) {
-    // Close the mobile menu when a tab is clicked
-    const navMenu = document.getElementById('navMenu');
+    // Close mobile menu
+    var navMenu = document.getElementById('navMenu');
     if (navMenu) {
         navMenu.classList.remove('active');
     }
@@ -14,15 +14,15 @@ function navigateTo(page) {
 }
 
 function loadPage(page) {
-    const content = document.getElementById('content');
+    var content = document.getElementById('content');
     
-    // Show loading
     content.innerHTML = '<div style="text-align:center; padding:50px;"><i class="fas fa-spinner fa-spin" style="font-size:40px; color:#2563eb;"></i></div>';
     
     // Update active menu
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    var links = document.querySelectorAll('.nav-menu a');
+    links.forEach(function(link) {
         link.classList.remove('active');
-        if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(page)) {
+        if (link.getAttribute('onclick') && link.getAttribute('onclick').indexOf(page) !== -1) {
             link.classList.add('active');
         }
     });
@@ -43,25 +43,6 @@ function loadPage(page) {
 
 // Mobile menu toggle
 function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('active');
+    var navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active');
 }
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const navMenu = document.getElementById('navMenu');
-    const hamburger = document.querySelector('.hamburger');
-    
-    if (navMenu && hamburger) {
-        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-            navMenu.classList.remove('active');
-        }
-    }
-});
-
-// Close menu when window is resized to desktop size
-window.addEventListener('resize', function() {
-    const navMenu = document.getElementById('navMenu');
-    if (window.innerWidth > 768 && navMenu) {
-        navMenu.classList.remove('active');
-    }
-});
