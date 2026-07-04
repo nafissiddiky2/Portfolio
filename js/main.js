@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function navigateTo(page) {
+    // Close the mobile menu when a tab is clicked
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+        navMenu.classList.remove('active');
+    }
+    
     loadPage(page);
 }
 
@@ -28,13 +34,34 @@ function loadPage(page) {
         })
         .then(function(html) {
             content.innerHTML = html;
+            window.scrollTo(0, 0);
         })
         .catch(function(error) {
             content.innerHTML = '<div class="page-container"><h2>Error Loading Page</h2><p>Please try again.</p></div>';
         });
 }
 
-// Mobile menu
+// Mobile menu toggle
 function toggleMenu() {
     document.getElementById('navMenu').classList.toggle('active');
 }
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (navMenu && hamburger) {
+        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove('active');
+        }
+    }
+});
+
+// Close menu when window is resized to desktop size
+window.addEventListener('resize', function() {
+    const navMenu = document.getElementById('navMenu');
+    if (window.innerWidth > 768 && navMenu) {
+        navMenu.classList.remove('active');
+    }
+});
