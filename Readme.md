@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website showcasing my skills, certificat
 
 ## 🚀 Live Demo
 
-Visit the live website: [S.N.Express Portfolio](https://nafissiddiky2.github.io/Portfolio/)
+Visit the live website: [S.A.Nafis Portfolio](https://nafissiddiky2.github.io/Portfolio/)
 
 ## 📋 Features
 
