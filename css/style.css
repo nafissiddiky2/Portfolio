@@ -617,6 +617,39 @@ footer {
     color: var(--dark-gray);
 }
 
+* ========================================
+   REUSABLE SECTION ICONS
+   ======================================== */
+
+/* Flex container for headings with icons */
+.page-container h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+/* Default section icon */
+.section-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Icon sizes */
+.section-icon-sm { width: 30px; height: 30px; object-fit: contain; flex-shrink: 0; }
+.section-icon-md { width: 40px; height: 40px; object-fit: contain; flex-shrink: 0; }
+.section-icon-lg { width: 50px; height: 50px; object-fit: contain; flex-shrink: 0; }
+
+/* Optional: Add hover effect */
+.section-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .gallery-container .grid-container {
