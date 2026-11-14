@@ -1,10 +1,10 @@
-# 🌐[S.A.Nafis](https://nafissiddiky2.github.io/Portfolio/) - Personal Portfolio
+# 🌐[S.A.Nafis](https://nafis-siddiky.netlify.app/) - Personal Portfolio
 
 A modern, responsive personal portfolio website showcasing my skills, certifications, projects, and contact information.
 
 ## 🚀 Live Demo
 
-Visit the live website: [S.A.Nafis Portfolio](https://nafissiddiky2.github.io/Portfolio/)
+Visit the live website: [S.A.Nafis Portfolio](https://nafis-siddiky.netlify.app/)
 
 ## 📋 Features
 
